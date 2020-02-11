@@ -1,0 +1,2 @@
+# latjs
+Kumpulan Latihan Javascript.
