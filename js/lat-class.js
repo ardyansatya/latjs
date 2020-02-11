@@ -24,6 +24,6 @@ class Profesi extends Orang { // membuat subclass
 iniSaya = new Profesi("Ardy", 27, "Pria", "Programer");
 //iniTeman = new Orang("Juhari", 19, "Pria");
 
-// document.getElementById("output").innerHTML = iniSaya.tambahan();
+document.getElementById("output").innerHTML = iniSaya.tambahan();
 
-console.log(iniSaya.tambahan())
+// console.log(iniSaya.tambahan())
