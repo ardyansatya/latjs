@@ -6,17 +6,24 @@ class Orang { // baris ini adalah kelas
     }
 
     paragraf() { // membuat method paragraf()
-        return "Nama saya adalah " + iniSaya.namaorang + ", usia saya " + iniSaya.usiaorang + ". Saya punya teman bernama " + iniTeman.namaorang + "." + " Usianya " + iniTeman.usiaorang + "." + " Jadi selisih usia kami adalah " + (iniSaya.usiaorang - iniTeman.usiaorang) + " tahun."
+        return "Nama saya adalah " + this.namaorang + ", usia saya " + this.usiaorang 
     }
 }
-//
 
+class Profesi extends Orang { // membuat subclass
+     constructor(nama, usia, gender, prof) {
+        super(nama, usia, gender);   // super memberi akses ke parent class
+        this.profesi = prof;
+     }
+     tambahan() { // membuat method
+         return this.paragraf() + '. Saya bekerja sebagai ' + this.profesi;
+     }
+}
 
 // Membuat objek dari class
-const iniSaya = new Orang("Ardy", 27, "Pria");
-let iniTeman = new Orang("Juhari", 19, "Pria");
+iniSaya = new Profesi("Ardy", 27, "Pria", "Programer");
+//iniTeman = new Orang("Juhari", 19, "Pria");
 
+// document.getElementById("output").innerHTML = iniSaya.tambahan();
 
-//document.getElementById("output").innerHTML = iniSaya.paragraf();
-
-console.log(iniSaya.paragraf())
+console.log(iniSaya.tambahan())
